@@ -1,0 +1,428 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CertifySphere | Certification & Exam Preparation</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html { scroll-behavior: smooth; }
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fc;
+  color: #17233b;
+  line-height: 1.6;
+}
+header {
+  background: white;
+  padding: 18px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 12px #00000010;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+  color: #3567e8;
+}
+nav a {
+  text-decoration: none;
+  color: #35415b;
+  margin: 0 10px;
+  font-size: 14px;
+}
+nav a:hover { color: #3567e8; }
+
+.hero {
+  min-height: 480px;
+  padding: 90px 8%;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(120deg,#edf2ff,#f5f0ff);
+}
+.hero-content { max-width: 650px; }
+.hero h1 {
+  font-size: 52px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.hero h1 span { color: #3567e8; }
+.hero p { color: #657087; margin-bottom: 25px; }
+.btn {
+  display: inline-block;
+  background: #3567e8;
+  color: white;
+  padding: 13px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+.btn:hover { background: #234fc5; }
+
+section { padding: 65px 8%; }
+.section-title {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+.section-desc {
+  color: #68748a;
+  margin-bottom: 30px;
+}
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 15px;
+  padding-top: 30px;
+}
+.stat, .card {
+  background: white;
+  padding: 25px;
+  border-radius: 13px;
+  box-shadow: 0 5px 20px #17233b0b;
+}
+.stat { text-align: center; }
+.stat h2 { color: #3567e8; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+.card {
+  border: 1px solid #e7ebf2;
+  transition: .2s;
+}
+.card:hover { transform: translateY(-5px); }
+.card h3 { margin: 12px 0; }
+.card p { color: #68748a; font-size: 14px; }
+.card a {
+  display: inline-block;
+  margin-top: 17px;
+  color: #3567e8;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 13px;
+}
+.tag {
+  display: inline-block;
+  background: #eaf0ff;
+  color: #3567e8;
+  padding: 5px 9px;
+  border-radius: 5px;
+  font-size: 11px;
+}
+.prepare { background: #edf2fc; }
+.quiz {
+  max-width: 750px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px #17233b12;
+}
+.quiz h3 { margin: 20px 0; }
+.option {
+  display: block;
+  width: 100%;
+  padding: 13px;
+  margin: 10px 0;
+  text-align: left;
+  background: #f5f7fc;
+  border: 1px solid #e0e5ef;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.option:hover { border-color: #3567e8; }
+.option.correct { background: #e4f8ed; border-color: green; }
+.option.wrong { background: #fff0f0; border-color: red; }
+.option:disabled { cursor: default; }
+#result { margin-top: 15px; font-weight: bold; }
+footer {
+  background: #111d36;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+@media(max-width:750px) {
+  header { flex-direction: column; gap: 12px; }
+  nav { display: flex; flex-wrap: wrap; justify-content: center; }
+  nav a { margin: 5px; }
+  .hero h1 { font-size: 38px; }
+  .stats { grid-template-columns: repeat(2,1fr); }
+  .cards { grid-template-columns: 1fr; }
+  section { padding: 45px 6%; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">CertifySphere.</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#updates">Updates</a>
+    <a href="#preparation">Preparation</a>
+    <a href="#quiz">Practice Quiz</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
+
+<div class="hero" id="home">
+  <div class="hero-content">
+    <p>YOUR CERTIFICATION COMPANION</p>
+    <h1>Learn. Prepare.<br><span>Get Certified.</span></h1>
+    <p>Discover certification opportunities, explore learning resources and prepare for your exams with confidence.</p>
+    <a href="#preparation" class="btn">Start Learning →</a>
+  </div>
+</div>
+
+<section>
+  <div class="stats">
+    <div class="stat"><h2>03</h2><p>Learning Areas</p></div>
+    <div class="stat"><h2>06</h2><p>Resources</p></div>
+    <div class="stat"><h2>10</h2><p>Practice Questions</p></div>
+    <div class="stat"><h2>24/7</h2><p>Learn Anytime</p></div>
+  </div>
+</section>
+
+<section id="updates">
+  <h2 class="section-title">Certification Updates</h2>
+  <p class="section-desc">Explore certification and online learning platforms.</p>
+
+  <div class="cards">
+    <div class="card">
+      <span class="tag">ONLINE COURSES</span>
+      <h3>NPTEL Courses</h3>
+      <p>Explore courses in engineering, science, programming and management.</p>
+      <a href="https://www.nptel.ac.in/" target="_blank">Visit NPTEL →</a>
+    </div>
+
+    <div class="card">
+      <span class="tag">TECHNOLOGY</span>
+      <h3>Microsoft Learn</h3>
+      <p>Improve your technical knowledge with Microsoft learning paths.</p>
+      <a href="https://learn.microsoft.com/training/" target="_blank">Explore Microsoft →</a>
+    </div>
+
+    <div class="card">
+      <span class="tag">DIGITAL SKILLS</span>
+      <h3>Google Skillshop</h3>
+      <p>Learn digital skills and explore Google product training.</p>
+      <a href="https://skillshop.withgoogle.com/" target="_blank">Visit Skillshop →</a>
+    </div>
+  </div>
+  <p class="section-desc" style="margin-top:15px">
+    Note: Verify current dates, fees and eligibility on official provider websites.
+  </p>
+</section>
+
+<section class="prepare" id="preparation">
+  <h2 class="section-title">Exam Preparation</h2>
+  <p class="section-desc">Choose a subject and start improving your skills.</p>
+
+  <div class="cards">
+    <div class="card">
+      <h3>HTML & CSS</h3>
+      <p>Learn webpage structure, styling, colors, fonts and layouts.</p>
+      <a href="https://developer.mozilla.org/en-US/docs/Learn" target="_blank">Study HTML & CSS →</a>
+    </div>
+
+    <div class="card">
+      <h3>C Programming</h3>
+      <p>Study variables, operators, loops, arrays and functions.</p>
+      <a href="https://www.learn-c.org/" target="_blank">Study C Programming →</a>
+    </div>
+
+    <div class="card">
+      <h3>Digital Skills</h3>
+      <p>Improve your computer fundamentals and digital awareness.</p>
+      <a href="https://www.digilocker.gov.in/" target="_blank">Explore Resources →</a>
+    </div>
+  </div>
+</section>
+
+<section id="quiz">
+  <h2 class="section-title">Practice Quiz</h2>
+  <p class="section-desc">Test your basic HTML and CSS knowledge.</p>
+
+  <div class="quiz">
+    <span class="tag" id="questionNumber">Question 1 of 5</span>
+    <h3 id="question">What does HTML stand for?</h3>
+    <div id="answers"></div>
+    <p id="result">Choose your answer.</p>
+    <button class="btn" id="next" disabled>Next Question →</button>
+  </div>
+</section>
+
+<section id="about" class="prepare">
+  <h2 class="section-title">About CertifySphere</h2>
+  <p class="section-desc">
+    CertifySphere is a student learning platform designed to bring
+    certification resources, exam preparation and practice activities
+    together in one place. Our goal is to make learning simple,
+    organized and accessible.
+  </p>
+</section>
+
+<footer>
+  <h3>CertifySphere.</h3>
+  <p>Learn. Prepare. Get Certified.</p>
+  <p>© <span id="year"></span> CertifySphere | Student Project</p>
+</footer>
+
+<script>
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+const questions = [
+  {
+    q: "What does HTML stand for?",
+    options: [
+      "Hyper Text Markup Language",
+      "High Text Machine Language",
+      "Hyper Tool Multi Language",
+      "Home Tool Markup Language"
+    ],
+    answer: 0
+  },
+  {
+    q: "Which language is used to style webpages?",
+    options: ["Python", "CSS", "C", "SQL"],
+    answer: 1
+  },
+  {
+    q: "Which is the largest HTML heading?",
+    options: ["<head>", "<h6>", "<h1>", "<header>"],
+    answer: 2
+  },
+  {
+    q: "Which CSS property changes text colour?",
+    options: ["font-style", "background", "text-size", "color"],
+    answer: 3
+  },
+  {
+    q: "Which attribute gives alternative text to an image?",
+    options: ["src", "alt", "href", "title-only"],
+    answer: 1
+  }
+];
+
+let current = 0;
+let score = 0;
+let answered = false;
+
+const question = document.getElementById("question");
+const answers = document.getElementById("answers");
+const result = document.getElementById("result");
+const next = document.getElementById("next");
+
+function showQuestion() {
+  answered = false;
+  next.disabled = true;
+
+  const item = questions[current];
+  question.textContent = item.q;
+  document.getElementById("questionNumber").textContent =
+    `Question ${current + 1} of ${questions.length}`;
+
+  result.textContent = "Choose your answer.";
+  answers.innerHTML = "";
+
+  item.options.forEach((option, index) => {
+    const button = document.createElement("button");
+    button.className = "option";
+    button.textContent = option;
+
+    button.onclick = () => checkAnswer(index);
+    answers.appendChild(button);
+  });
+
+  next.textContent =
+    current === questions.length - 1
+      ? "Show Result"
+      : "Next Question →";
+}
+
+function checkAnswer(selected) {
+  if (answered) return;
+  answered = true;
+
+  const correct = questions[current].answer;
+  const buttons = answers.querySelectorAll("button");
+
+  buttons.forEach((button, index) => {
+    button.disabled = true;
+
+    if (index === correct) {
+      button.classList.add("correct");
+    } else if (index === selected) {
+      button.classList.add("wrong");
+    }
+  });
+
+  if (selected === correct) {
+    score++;
+    result.textContent = "Correct! Well done.";
+  } else {
+    result.textContent =
+      "Incorrect. The correct answer is " +
+      questions[current].options[correct];
+  }
+
+  next.disabled = false;
+}
+
+next.onclick = () => {
+  if (!answered) return;
+
+  if (current < questions.length - 1) {
+    current++;
+    showQuestion();
+  } else {
+    question.textContent = "Quiz Completed!";
+    answers.innerHTML = "";
+    result.textContent =
+      `Your score: ${score} out of ${questions.length}`;
+    next.textContent = "Restart Quiz";
+    next.onclick = restartQuiz;
+  }
+};
+
+function restartQuiz() {
+  current = 0;
+  score = 0;
+  next.onclick = continueQuiz;
+  showQuestion();
+}
+
+function continueQuiz() {
+  if (!answered) return;
+
+  if (current < questions.length - 1) {
+    current++;
+    showQuestion();
+  } else {
+    question.textContent = "Quiz Completed!";
+    answers.innerHTML = "";
+    result.textContent =
+      `Your score: ${score} out of ${questions.length}`;
+    next.textContent = "Restart Quiz";
+    next.onclick = restartQuiz;
+  }
+}
+
+showQuestion();
+</script>
+
+</body>
+</html>
